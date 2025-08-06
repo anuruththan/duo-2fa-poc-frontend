@@ -31,8 +31,8 @@ function LoginForm() {
         },
         { withCredentials: true }
       );
-      if (res.data?.data?.duo_url) {
-        window.location.href = res.data.data.duo_url;
+      if (res.data?.data?.url) {
+        window.location.href = res.data.data.url;
       } else {
         setErr("Login failed (no duo_url returned)");
       }
