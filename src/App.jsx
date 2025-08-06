@@ -31,8 +31,8 @@ function LoginForm() {
         },
         { withCredentials: true }
       );
-      if (res.data?.data?.duo_url) {
-        window.location.href = res.data.data.duo_url;
+      if (res.data?.data?.url) {
+        window.location.href = res.data.data.url;
       } else {
         setErr("Login failed (no duo_url returned)");
       }
@@ -46,8 +46,8 @@ function LoginForm() {
     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-white">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
-          alt="Smartzi"
-          src="/smartzi.png"
+          alt="Random Logo"
+          src="/ac-logo.png"
           className="mx-auto h-10 w-auto"
         />
         <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
